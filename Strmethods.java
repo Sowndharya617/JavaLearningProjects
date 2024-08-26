@@ -1,41 +1,68 @@
-class Strmethods{
-    public static void main(String args []){
-        String a =" Hello World! This is a program based on string methods";
-        int b = a.length();
-        System.out.println("Length of string : "+b);
-        char c = a.charAt(12);
-        System.out.println("Character at index 12 :"+c);
-        String d =a.substring(2,8);
-        System.out.println("Subtring of the main string :"+d);
-        int e=a.indexOf("l");
-        int f = a.lastIndexOf("l");
-        System.out.println("First occurance: "+e);
-        System.out.println("Last occurance :"+f);
-        String g =a.toUpperCase();
-        System.out.println("String to uppercase :"+g);
-        String h = a.toLowerCase();
-        System.out.println("String to lower  case :"+h);
-        String z = a.trim();
-        System.out.println("Trimming the string for white spaces:"+z);
-        String i = a.replace('l', '1');
-        String k = a.replace("World", "Sowndharya");
-        boolean j = a.equals(" Hello World! ");
-        boolean l =a.contains("lo");
-        boolean m =a.startsWith("Hel");
-        boolean n = a.endsWith("ld! ");
-        System.out.println("Starting of ths string :"+m);
-        System.out.println("Ending of the string :"+n);
-        System.out.println("Substring contains in the main staring : "+l);
-        System.out.println("Equality check :"+j);
-        System.out.println("Replacing with a charcter : "+i);
-        System.out.println("Replacing entire word :"+k);
-        String[] words = a.split(" ");
-        for(String word:words){
-            System.out.println("Word split based on spaces"+word);
+public class StrMethods {
+    public static void main(String[] args) {
+        // Initialize the main string
+        String mainString = " Hello World! This is a program based on string methods";
+
+        // 1. Length Calculation
+        int length = mainString.length();
+        System.out.println("Length of the string: " + length);
+
+        // 2. Character Extraction
+        char charAt12 = mainString.charAt(12);
+        System.out.println("Character at index 12: " + charAt12);
+
+        // 3. Substring Extraction
+        String substring = mainString.substring(2, 8);
+        System.out.println("Substring of the main string: " + substring);
+
+        // 4. Index Finding
+        int firstOccurrence = mainString.indexOf('l');
+        int lastOccurrence = mainString.lastIndexOf('l');
+        System.out.println("First occurrence of 'l': " + firstOccurrence);
+        System.out.println("Last occurrence of 'l': " + lastOccurrence);
+
+        // 5. Case Conversion
+        String upperCase = mainString.toUpperCase();
+        System.out.println("String to uppercase: " + upperCase);
+        String lowerCase = mainString.toLowerCase();
+        System.out.println("String to lowercase: " + lowerCase);
+
+        // 6. Trimming
+        String trimmedString = mainString.trim();
+        System.out.println("Trimming the string for white spaces: " + trimmedString);
+
+        // 7. Replacement
+        String replacedChars = mainString.replace('l', '1');
+        System.out.println("Replacing 'l' with '1': " + replacedChars);
+        String replacedWord = mainString.replace("World", "Sowndharya");
+        System.out.println("Replacing 'World' with 'Sowndharya': " + replacedWord);
+
+        // 8. Equality Check
+        boolean equalsCheck = mainString.equals(" Hello World! ");
+        System.out.println("Equality check with ' Hello World! ': " + equalsCheck);
+
+        // 9. Contains Check
+        boolean containsCheck = mainString.contains("lo");
+        System.out.println("Substring 'lo' is contained in the main string: " + containsCheck);
+
+        // 10. Starts and Ends With
+        boolean startsWithCheck = mainString.startsWith("Hel");
+        System.out.println("Starts with 'Hel': " + startsWithCheck);
+        boolean endsWithCheck = mainString.endsWith("ld! ");
+        System.out.println("Ends with 'ld! ': " + endsWithCheck);
+
+        // 11. Splitting
+        String[] words = mainString.split(" ");
+        System.out.println("Words split based on spaces:");
+        for (String word : words) {
+            System.out.println(word);
         }
-        char [] chararray=a.toCharArray();
-        for(char ch:chararray){
-        System.out.println("Eacc character in the string : "+ch);
+
+        // 12. Convert to Char Array
+        char[] charArray = mainString.toCharArray();
+        System.out.println("Each character in the string:");
+        for (char ch : charArray) {
+            System.out.println(ch);
         }
     }
 }
