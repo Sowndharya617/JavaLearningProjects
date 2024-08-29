@@ -23,7 +23,7 @@ class watertracker{
 
             System.out.print("REMINDER :");
             System.out.print("It is "+ hours+" hours ");
-            System.out.print(" and "+minutes+" minutes....."+" Time to take your sip of water to feel energized!!");
+            System.out.print(" and "+minutes+" minutes...."+" Time to take your sip of water to feel energized!!");
 
 
         
